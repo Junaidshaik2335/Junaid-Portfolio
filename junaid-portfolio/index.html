@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ─────────────────────────────────────────
+       CHARACTER SET & VIEWPORT
+  ───────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─────────────────────────────────────────
+       SEO META TAGS
+  ───────────────────────────────────────── -->
+  <title>S Mohammed Junaid — Full Stack Developer</title>
+  <meta name="title"       content="S Mohammed Junaid — Full Stack Developer" />
+  <meta name="description" content="Portfolio of S Mohammed Junaid — final-year B.Tech ECE student and full-stack developer. Experienced in React, Node.js, Express, MongoDB, and REST APIs. Interned at Bluestock Fintech and Edu Versity." />
+  <meta name="keywords"    content="S Mohammed Junaid, Full Stack Developer, React, Node.js, MongoDB, Express, Portfolio, ECE, Backend Developer, Hyderabad, India" />
+  <meta name="author"      content="S Mohammed Junaid" />
+  <meta name="robots"      content="index, follow" />
+  <meta name="theme-color" content="#00d4ff" />
+
+  <!-- ─────────────────────────────────────────
+       OPEN GRAPH (Social sharing preview)
+  ───────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://smdjunaid.dev/" />
+  <meta property="og:title"       content="S Mohammed Junaid — Full Stack Developer" />
+  <meta property="og:description" content="Full-stack developer. React · Node.js · MongoDB · Express. Available for opportunities." />
+  <meta property="og:image"       content="assets/images/og-preview.png" />
+
+  <!-- ─────────────────────────────────────────
+       TWITTER CARD
+  ───────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="S Mohammed Junaid — Full Stack Developer" />
+  <meta name="twitter:description" content="Full-stack developer. React · Node.js · MongoDB · Express." />
+  <meta name="twitter:image"       content="assets/images/og-preview.png" />
+
+  <!-- ─────────────────────────────────────────
+       FAVICON
+       SVG favicon works in all modern browsers.
+  ───────────────────────────────────────── -->
+  <link rel="icon"             type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- ─────────────────────────────────────────
+       FONTS — Google Fonts
+       preconnect speeds up font loading
+  ───────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ─────────────────────────────────────────
+       STYLESHEET
+  ───────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADER — Full screen on page open
+  ═══════════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-name">S.&nbsp;<span>JUNAID</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="lbar"></div>
+    </div>
+    <div class="loader-pct" id="lpct">0%</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SCROLL PROGRESS BAR — Fixed top of page
+  ═══════════════════════════════════════════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       CUSTOM CURSOR — Two-layer (dot + ring)
+  ═══════════════════════════════════════════════ -->
+  <div id="c-dot"></div>
+  <div id="c-ring"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       PARTICLE CANVAS — Fixed background
+  ═══════════════════════════════════════════════ -->
+  <canvas id="hero-canvas"></canvas>
+
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="main-nav">
+
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      Junaid.dev
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+    </ul>
+
+    <a href="mailto:smdjunaid2335@gmail.com" class="nav-hire">Hire Me ↗</a>
+
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="hero">
+
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      Available for opportunities
+    </div>
+
+    <h1 class="hero-h1">
+      Mohammed<span class="line2">Junaid.</span>
+    </h1>
+
+    <div class="hero-role-wrap">
+      <p class="hero-role" id="typed-text"></p>
+    </div>
+
+    <div class="hero-chips">
+      <span class="chip chip-cyan">React.js</span>
+      <span class="chip chip-violet">Node.js</span>
+      <span class="chip chip-green">MongoDB</span>
+      <span class="chip chip-orange">Express.js</span>
+      <span class="chip chip-cyan">Full Stack</span>
+      <span class="chip chip-violet">Backend APIs</span>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#projects" class="mag-btn mag-btn-fill">
+        <div class="mag-btn-inner">View my work <span class="arrow">↗</span></div>
+      </a>
+      <a href="assets/resume.pdf" class="mag-btn mag-btn-outline" download>
+        <div class="mag-btn-inner">⬇ Download Resume</div>
+      </a>
+      <a href="mailto:smdjunaid2335@gmail.com" class="mag-btn mag-btn-outline">
+        <div class="mag-btn-inner">✉ Get in touch</div>
+      </a>
+    </div>
+
+    <!-- Floating stats panel — desktop only -->
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num" data-count="2">0</div>
+        <div class="hstat-lbl">Internships</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num" data-count="3">0</div>
+        <div class="hstat-lbl">Projects</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num" data-count="5">0</div>
+        <div class="hstat-lbl">Certifications</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">2026</div>
+        <div class="hstat-lbl">Graduating</div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       MARQUEE — Tech stack ticker (JS populates this)
+  ═══════════════════════════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="mtrack"></div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="section-pad">
+    <div class="about-grid">
+
+      <!-- Left: copy -->
+      <div class="reveal-left">
+        <div class="s-label">About me</div>
+        <h2 class="s-heading">I turn ideas into<br>real products.</h2>
+        <div class="about-text">
+          <p>
+            I'm a <strong>B.Tech Electronics &amp; Communication Engineering</strong> student at
+            Anantha Lakshmi Institute of Technology &mdash; final year, graduating 2026 &mdash;
+            with a deep pivot into <em>full-stack web development</em>.
+          </p>
+          <p>
+            My ECE background gives me an edge most web devs don't have: I think in systems.
+            I understand how things work at the hardware level, which translates directly into
+            writing <strong>efficient, low-overhead code</strong>.
+          </p>
+          <blockquote class="about-quote">
+            &ldquo;I don&rsquo;t just write code that works &mdash; I write code that&rsquo;s
+            clean, scalable, and something a team can actually maintain.&rdquo;
+          </blockquote>
+          <p>
+            I&rsquo;ve shipped real features at <strong>Bluestock Fintech</strong> (backend +
+            API modules) and built full-stack applications during my internship at
+            <strong>Edu Versity</strong>. My stack is Node/Express/MongoDB on the backend and
+            React on the front &mdash; but I pick the right tool, not the trendy one.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: terminal + stats -->
+      <div class="about-right reveal-right">
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="t-dot"></div>
+            <div class="t-dot"></div>
+            <div class="t-dot"></div>
+            <div class="t-title">~/junaid &mdash; zsh</div>
+          </div>
+          <div class="terminal-body">
+            <div><span class="t-prompt">junaid@dev:~$</span> <span class="t-cmd">cat profile.json</span></div>
+            <div class="t-out">{</div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">&quot;name&quot;</span>:       <span class="t-str">&quot;S Mohammed Junaid&quot;</span>,</div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">&quot;role&quot;</span>:       <span class="t-str">&quot;Full Stack Developer&quot;</span>,</div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">&quot;degree&quot;</span>:     <span class="t-str">&quot;B.Tech ECE (2026)&quot;</span>,</div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">&quot;openToWork&quot;</span>: <span class="t-bool">true</span>,</div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">&quot;contact&quot;</span>:   <span class="t-str">&quot;smdjunaid2335@gmail.com&quot;</span></div>
+            <div class="t-out">}</div>
+            <div style="margin-top:0.5rem">
+              <span class="t-prompt">junaid@dev:~$</span>
+              <span class="t-cursor"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-box"><span class="stat-n">2+</span><div class="stat-l">Internships</div></div>
+          <div class="stat-box"><span class="stat-n">3+</span><div class="stat-l">Projects</div></div>
+          <div class="stat-box"><span class="stat-n">5+</span><div class="stat-l">Certifications</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="skills" class="section-pad">
+
+    <div class="s-label reveal">Tech Stack</div>
+    <h2 class="s-heading reveal">What I work with.</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal d1">
+        <span class="sk-icon">💻</span>
+        <div class="sk-name">Languages</div>
+        <div class="sk-tags">
+          <span class="sk-tag">C</span>
+          <span class="sk-tag">Java</span>
+          <span class="sk-tag">JavaScript</span>
+          <span class="sk-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d2">
+        <span class="sk-icon">🎨</span>
+        <div class="sk-name">Frontend</div>
+        <div class="sk-tags">
+          <span class="sk-tag">HTML5</span>
+          <span class="sk-tag">CSS3</span>
+          <span class="sk-tag">React.js</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d3">
+        <span class="sk-icon">⚙️</span>
+        <div class="sk-name">Backend</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Node.js</span>
+          <span class="sk-tag">Express.js</span>
+          <span class="sk-tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d4">
+        <span class="sk-icon">🗄️</span>
+        <div class="sk-name">Databases</div>
+        <div class="sk-tags">
+          <span class="sk-tag">MySQL</span>
+          <span class="sk-tag">MongoDB</span>
+          <span class="sk-tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d5">
+        <span class="sk-icon">🧠</span>
+        <div class="sk-name">CS Fundamentals</div>
+        <div class="sk-tags">
+          <span class="sk-tag">DSA</span>
+          <span class="sk-tag">OOPs</span>
+          <span class="sk-tag">DBMS</span>
+          <span class="sk-tag">OS</span>
+          <span class="sk-tag">Networks</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d6">
+        <span class="sk-icon">🛠️</span>
+        <div class="sk-name">Tools</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Git</span>
+          <span class="sk-tag">GitHub</span>
+          <span class="sk-tag">VS Code</span>
+          <span class="sk-tag">Postman</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="experience" class="section-pad">
+    <div class="exp-layout">
+
+      <!-- Sticky left -->
+      <div class="exp-sticky reveal-left">
+        <div class="s-label">Experience</div>
+        <h2 class="s-heading">Where I&rsquo;ve<br>shipped code.</h2>
+        <p style="color:rgba(240,240,248,0.5);font-size:0.95rem;line-height:1.8;margin-top:1rem;">
+          Two real-world internships. Real codebases. Real deadlines.
+          Not just coursework &mdash; actual production experience that
+          taught me how teams build software.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="exp-timeline">
+
+        <div class="exp-item reveal d1">
+          <div class="exp-date">Dec 2025 &mdash; Jan 2026</div>
+          <div class="exp-title">Software Development Engineer Intern</div>
+          <div class="exp-company">Bluestock Fintech &middot; Hyderabad</div>
+          <p class="exp-desc">
+            Jumped into a live fintech product and immediately contributed.
+            Built backend modules handling real financial workflows, wrote and
+            integrated API endpoints, and participated in code reviews.
+            Worked within a Git-based team workflow &mdash; branching, PR reviews,
+            merge conflicts and all.
+          </p>
+        </div>
+
+        <div class="exp-item reveal d2">
+          <div class="exp-date">Jun 2024 &mdash; Jul 2024</div>
+          <div class="exp-title">Full Stack Web Development Intern</div>
+          <div class="exp-company">Edu Versity &middot; Remote</div>
+          <p class="exp-desc">
+            Delivered end-to-end mini products from scratch &mdash; designed schemas,
+            built Express APIs, wired React front-ends, and deployed.
+            Got fast feedback cycles and learned to ship fast without cutting
+            corners on quality.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECTS SECTION — Horizontal drag scroll
+  ═══════════════════════════════════════════════ -->
+  <section id="projects">
+
+    <div class="projects-header">
+      <div class="s-label reveal">Projects</div>
+      <h2 class="s-heading reveal">Things I&rsquo;ve built.</h2>
+    </div>
+
+    <div class="proj-scroll-track" id="proj-track">
+
+      <!-- ── Project 01 ── -->
+      <div class="proj-card">
+        <div class="proj-card-top" style="background:linear-gradient(135deg,#0a1628,#0d2240);">
+          <canvas class="proj-mini-canvas" data-color="0,212,255"></canvas>
+          <div class="proj-card-icon">🧑‍💻</div>
+        </div>
+        <div class="proj-card-body">
+          <div class="proj-num">01 / Project</div>
+          <div class="proj-name">Personal Portfolio</div>
+          <p class="proj-desc">
+            Responsive portfolio showcasing projects and skills.
+            Hand-crafted with performance and accessibility in mind &mdash; no templates.
+          </p>
+          <div class="proj-tags">
+            <span class="proj-tag">HTML5</span>
+            <span class="proj-tag">CSS3</span>
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">Responsive</span>
+          </div>
+          <!-- Update href with your live/GitHub URL -->
+          <a href="#" class="proj-link">View project <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- ── Project 02 ── -->
+      <div class="proj-card">
+        <div class="proj-card-top" style="background:linear-gradient(135deg,#1a0a06,#2d1408);">
+          <canvas class="proj-mini-canvas" data-color="249,115,22"></canvas>
+          <div class="proj-card-icon">🛒</div>
+        </div>
+        <div class="proj-card-body">
+          <div class="proj-num">02 / Project</div>
+          <div class="proj-name">Amazon Clone</div>
+          <p class="proj-desc">
+            Full-featured e-commerce UI replicating Amazon&rsquo;s product flow.
+            Responsive, fast, and pixel-detailed &mdash; practical proof of frontend skill.
+          </p>
+          <div class="proj-tags">
+            <span class="proj-tag">HTML5</span>
+            <span class="proj-tag">CSS3</span>
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">E-commerce</span>
+          </div>
+          <a href="#" class="proj-link">View project <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- ── Project 03 ── -->
+      <div class="proj-card">
+        <div class="proj-card-top" style="background:linear-gradient(135deg,#060f1a,#0a1f2e);">
+          <canvas class="proj-mini-canvas" data-color="139,92,246"></canvas>
+          <div class="proj-card-icon">💼</div>
+        </div>
+        <div class="proj-card-body">
+          <div class="proj-num">03 / Project</div>
+          <div class="proj-name">Job Portal</div>
+          <p class="proj-desc">
+            Full-stack job board with JWT auth, job posting, candidate tracking,
+            and role-based dashboards. Backend-heavy, production-oriented.
+          </p>
+          <div class="proj-tags">
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">Express.js</span>
+            <span class="proj-tag">MongoDB</span>
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">Auth</span>
+          </div>
+          <a href="#" class="proj-link">View project <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Trailing spacer -->
+      <div style="flex:0 0 calc(5vw - 2rem);"></div>
+
+    </div><!-- /proj-scroll-track -->
+
+    <p class="drag-hint">
+      <span class="drag-arrow">←</span>&nbsp; drag to explore &nbsp;<span class="drag-arrow">→</span>
+    </p>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CERTIFICATIONS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="certifications" class="section-pad">
+
+    <div class="s-label reveal">Certifications</div>
+    <h2 class="s-heading reveal">Proof of learning.</h2>
+
+    <div class="certs-grid">
+
+      <div class="cert-card reveal d1">
+        <div class="cert-badge">🎓</div>
+        <div>
+          <div class="cert-name">Full Stack Web Development</div>
+          <div class="cert-issuer">Edu Versity</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d2">
+        <div class="cert-badge">🚀</div>
+        <div>
+          <div class="cert-name">SDE Internship Certificate</div>
+          <div class="cert-issuer">Bluestock Fintech</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d3">
+        <div class="cert-badge">🤖</div>
+        <div>
+          <div class="cert-name">AI Fundamentals</div>
+          <div class="cert-issuer">IBM</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d4">
+        <div class="cert-badge">☁️</div>
+        <div>
+          <div class="cert-name">OCI 2025 &mdash; Generative AI Professional</div>
+          <div class="cert-issuer">Oracle</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d5">
+        <div class="cert-badge">✨</div>
+        <div>
+          <div class="cert-name">Prompt Engineering &amp; ChatGPT</div>
+          <div class="cert-issuer">ExcelR</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+
+      <div class="reveal">
+        <h2 class="contact-big">Let&rsquo;s make<br>something <em>great.</em></h2>
+      </div>
+
+      <p class="contact-sub reveal">
+        I&rsquo;m open to full-time roles, internships, and freelance projects.
+        If you&rsquo;re building something interesting &mdash; I want to hear about it.
+      </p>
+
+      <div class="contact-links reveal">
+        <a href="mailto:smdjunaid2335@gmail.com" class="contact-pill">✉ smdjunaid2335@gmail.com</a>
+        <a href="tel:+918074722358"               class="contact-pill">📞 +91-8074722358</a>
+        <a href="https://www.linkedin.com/in/s-mohammed-junaid/" target="_blank" rel="noopener" class="contact-pill">🔗 LinkedIn</a>
+        <a href="https://github.com/Junaidshaik2335" target="_blank" rel="noopener" class="contact-pill">🐙 GitHub</a>
+      </div>
+
+      <div class="reveal">
+        <a href="mailto:smdjunaid2335@gmail.com" class="mag-btn mag-btn-fill" style="display:inline-flex;">
+          <div class="mag-btn-inner">Start a conversation <span class="arrow">↗</span></div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer>
+    <span>&copy; © 2026 S Mohammed Junaid</span>
+    <div class="footer-right">
+      Built with <span class="footer-heart">♥</span> &amp; pure HTML / CSS / JS
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPT — loaded last for best performance
+  ═══════════════════════════════════════════════ -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
